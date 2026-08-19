@@ -8,12 +8,24 @@
     <title>Aventura Global | Agencia de Viajes Premium</title>
     <link rel="icon" type="image/png" href="img/agency.png">
     <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
+    <!-- Cursor Glow -->
+    <div class="cursor-glow" id="cursorGlow"></div>
+
     <!-- Scroll Progress Bar -->
     <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+        <div class="container topbar__inner">
+            <span class="topbar__item">+57 (66) 320-4567</span>
+            <span class="topbar__item">contacto@aventuraglobal.com</span>
+            <span class="topbar__item">Centro Comercial El Cacique, Pereira</span>
+        </div>
+    </div>
 
     <!-- Header -->
     <header class="header" id="inicio">
@@ -29,8 +41,10 @@
                     <li><a href="#paquetes" class="header__link">Paquetes</a></li>
                     <li><a href="#galeria" class="header__link">Galería</a></li>
                     <li><a href="#reseñas" class="header__link">Reseñas</a></li>
+                    <li><a href="#faq" class="header__link">FAQ</a></li>
                     <li><a href="#contacto" class="header__link">Contacto</a></li>
                 </ul>
+                <a href="#contacto" class="btn btn--primary header__cta">Reservar Vuelo</a>
             </nav>
             <button class="header__toggle" id="navToggle" aria-label="Abrir menú">
                 <span></span>
@@ -48,27 +62,39 @@
                     <div class="hero__overlay"></div>
                     <img src="img/slide1.jpg" alt="Destinos tropicales" class="hero__img">
                     <div class="hero__content">
+                        <span class="hero__tag">✈ Agencia de Viajes Premium</span>
                         <h1 class="hero__title" data-text="Descubre el Mundo">Descubre el Mundo</h1>
                         <p class="hero__subtitle">Experiencias únicas que transformarán tu vida</p>
-                        <a href="#paquetes" class="btn btn--primary">Ver Paquetes</a>
+                        <div class="hero__actions">
+                            <a href="#paquetes" class="btn btn--primary">Ver Paquetes</a>
+                            <a href="#contacto" class="btn btn--glass">Asesoría VIP</a>
+                        </div>
                     </div>
                 </div>
                 <div class="hero__slide hero__slide--2">
                     <div class="hero__overlay"></div>
                     <img src="img/slide2.jpg" alt="Aventuras extremas" class="hero__img">
                     <div class="hero__content">
+                        <span class="hero__tag">🏔 Circuitos Internacionales</span>
                         <h1 class="hero__title" data-text="Aventuras Extremas">Aventuras Extremas</h1>
                         <p class="hero__subtitle">Desafía tus límites en los mejores destinos</p>
-                        <a href="#paquetes" class="btn btn--primary">Explorar</a>
+                        <div class="hero__actions">
+                            <a href="#paquetes" class="btn btn--primary">Explorar</a>
+                            <a href="#galeria" class="btn btn--glass">Ver Galería</a>
+                        </div>
                     </div>
                 </div>
                 <div class="hero__slide hero__slide--3">
                     <div class="hero__overlay"></div>
                     <img src="img/slide3.jpg" alt="Relax y playa" class="hero__img">
                     <div class="hero__content">
+                        <span class="hero__tag">🌅 Todo Incluido</span>
                         <h1 class="hero__title" data-text="Relax Total">Relax Total</h1>
                         <p class="hero__subtitle">Playas paradisíacas te esperan</p>
-                        <a href="#paquetes" class="btn btn--primary">Reservar Ahora</a>
+                        <div class="hero__actions">
+                            <a href="#paquetes" class="btn btn--primary">Reservar Ahora</a>
+                            <a href="#contacto" class="btn btn--glass">Cotizar Viaje</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -76,18 +102,48 @@
             <button class="hero__btn hero__btn--next" id="nextBtn" aria-label="Siguiente">&#10095;</button>
             <div class="hero__dots" id="heroDots"></div>
         </div>
+        <div class="hero__scroll-hint">
+            <span>Scroll</span>
+            <div class="hero__scroll-line"></div>
+        </div>
     </section>
 
     <!-- Main Content -->
     <main>
 
+        <!-- Stats -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats__grid">
+                    <div class="stat-card">
+                        <span class="stat-card__number" data-target="15000">0</span><span class="stat-card__suffix">+</span>
+                        <span class="stat-card__label">Viajeros Felices</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number" data-target="45">0</span><span class="stat-card__suffix">+</span>
+                        <span class="stat-card__label">Destinos Globales</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number" data-target="99" data-decimal="true">0</span><span class="stat-card__suffix">%</span>
+                        <span class="stat-card__label">Satisfacción</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-card__number" data-target="24">0</span><span class="stat-card__suffix">/7</span>
+                        <span class="stat-card__label">Soporte Concierge</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Destinos Populares -->
         <section class="section" id="destinos">
             <div class="container">
+                <span class="section__tag">Explora</span>
                 <h2 class="section__title">Destinos Populares</h2>
                 <p class="section__subtitle">Explora los lugares más fascinantes del planeta</p>
                 <div class="destinos__grid">
-                    <article class="destino-card">
+                    <article class="destino-card" data-tilt>
+                        <div class="destino-card__glow"></div>
                         <div class="destino-card__img">
                             <img src="img/destino1.jpg" alt="Santorini, Grecia">
                             <div class="destino-card__overlay">
@@ -103,7 +159,8 @@
                             </div>
                         </div>
                     </article>
-                    <article class="destino-card">
+                    <article class="destino-card" data-tilt>
+                        <div class="destino-card__glow"></div>
                         <div class="destino-card__img">
                             <img src="img/destino2.jpg" alt="Bali, Indonesia">
                             <div class="destino-card__overlay">
@@ -119,7 +176,8 @@
                             </div>
                         </div>
                     </article>
-                    <article class="destino-card">
+                    <article class="destino-card" data-tilt>
+                        <div class="destino-card__glow"></div>
                         <div class="destino-card__img">
                             <img src="img/destino3.jpg" alt="Machu Picchu, Perú">
                             <div class="destino-card__overlay">
@@ -142,10 +200,12 @@
         <!-- Paquetes de Viaje -->
         <section class="section section--alt" id="paquetes">
             <div class="container">
+                <span class="section__tag">Paquetes</span>
                 <h2 class="section__title">Paquetes de Viaje</h2>
                 <p class="section__subtitle">Elige la experiencia perfecta para ti</p>
                 <div class="paquetes__grid">
-                    <article class="paquete-card">
+                    <article class="paquete-card" data-tilt>
+                        <div class="paquete-card__glow"></div>
                         <div class="paquete-card__header">
                             <span class="paquete-card__badge">Popular</span>
                             <h3 class="paquete-card__title">Caribe Dream</h3>
@@ -169,7 +229,8 @@
                         </div>
                     </article>
 
-                    <article class="paquete-card paquete-card--featured">
+                    <article class="paquete-card paquete-card--featured" data-tilt>
+                        <div class="paquete-card__glow paquete-card__glow--gold"></div>
                         <div class="paquete-card__header">
                             <span class="paquete-card__badge paquete-card__badge--gold">Premium</span>
                             <h3 class="paquete-card__title">Europa Encantada</h3>
@@ -193,7 +254,8 @@
                         </div>
                     </article>
 
-                    <article class="paquete-card">
+                    <article class="paquete-card" data-tilt>
+                        <div class="paquete-card__glow"></div>
                         <div class="paquete-card__header">
                             <span class="paquete-card__badge">Aventura</span>
                             <h3 class="paquete-card__title">Safari Africano</h3>
@@ -223,6 +285,7 @@
         <!-- Galería -->
         <section class="section" id="galeria">
             <div class="container">
+                <span class="section__tag">Galería</span>
                 <h2 class="section__title">Galería de Experiencias</h2>
                 <p class="section__subtitle">Momentos capturados por nuestros viajeros</p>
                 <div class="galeria__grid">
@@ -257,10 +320,12 @@
         <!-- Reseñas -->
         <section class="section section--dark" id="reseñas">
             <div class="container">
-                <h2 class="section__title section__title--light">Lo Que Dicen Nuestros Viajeros</h2>
-                <p class="section__subtitle section__subtitle--light">Experiencias reales de clientes satisfechos</p>
+                <span class="section__tag">Testimonios</span>
+                <h2 class="section__title">Lo Que Dicen Nuestros Viajeros</h2>
+                <p class="section__subtitle">Experiencias reales de clientes satisfechos</p>
                 <div class="reviews__grid">
-                    <article class="review-card">
+                    <article class="review-card" data-tilt>
+                        <div class="review-card__glow"></div>
                         <div class="review-card__stars">★★★★★</div>
                         <p class="review-card__text">"Increíble experiencia en Bali. Todo estaba perfectamente organizado, desde los templos hasta los restaurantes. La guía local fue excepcional."</p>
                         <div class="review-card__author">
@@ -274,7 +339,8 @@
                         </div>
                     </article>
 
-                    <article class="review-card">
+                    <article class="review-card" data-tilt>
+                        <div class="review-card__glow"></div>
                         <div class="review-card__stars">★★★★★</div>
                         <p class="review-card__text">"El safari fue la experiencia de mi vida. Ver a los leones de cerca y dormir en una cabaña en la sabana es algo que nunca olvidaré."</p>
                         <div class="review-card__author">
@@ -288,7 +354,8 @@
                         </div>
                     </article>
 
-                    <article class="review-card">
+                    <article class="review-card" data-tilt>
+                        <div class="review-card__glow"></div>
                         <div class="review-card__stars">★★★★★</div>
                         <p class="review-card__text">"Nuestra luna de miel en Santorini fue mágica. El hotel con vista al mar, las excursiones en barco y la comida griega... todo perfecto."</p>
                         <div class="review-card__author">
@@ -305,13 +372,62 @@
             </div>
         </section>
 
+        <!-- FAQ -->
+        <section class="section section--alt" id="faq">
+            <div class="container">
+                <span class="section__tag">FAQ</span>
+                <h2 class="section__title">Preguntas Frecuentes</h2>
+                <p class="section__subtitle">Resolvemos tus dudas sobre nuestros paquetes</p>
+                <div class="faq__list">
+                    <article class="faq-item">
+                        <button class="faq-item__trigger">
+                            <span>¿Qué incluyen los paquetes Todo Incluido?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Nuestros paquetes Todo Incluido comprenden tiquetes aéreos de ida y regreso, hospedaje en resorts 4★ y 5★, alimentación completa, bebidas ilimitadas, traslados y asistencia médica internacional.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-item__trigger">
+                            <span>¿Cómo puedo cancelar o modificar mi reserva?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Tienes 48 horas antes de la fecha de viaje para cancelar sin costo. Para modificaciones contáctanos por WhatsApp o al correo contacto@aventuraglobal.com y un agente te asistirá en menos de 15 minutos.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-item__trigger">
+                            <span>¿Ofrecen planes de financiación?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Sí, trabajamos con hasta 24 meses sin intereses en tarjetas de crédito de bancos aliados. También ofrecemos planes personalizados según tu presupuesto.</p>
+                        </div>
+                    </article>
+                    <article class="faq-item">
+                        <button class="faq-item__trigger">
+                            <span>¿Qué documentos necesito para viajar?</span>
+                            <span class="faq-item__icon">+</span>
+                        </button>
+                        <div class="faq-item__content">
+                            <p>Pasaporte vigente, visa (según destino), seguro de viaje internacional y comprobante de vacunación donde se requiera. Nuestro equipo te asesora con todo el proceso.</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
         <!-- Contacto -->
         <section class="section" id="contacto">
             <div class="container">
+                <span class="section__tag">Contacto</span>
                 <h2 class="section__title">Contáctanos</h2>
                 <p class="section__subtitle">¿Listo para tu próxima aventura? Escríbenos</p>
                 <div class="contacto__grid">
-                    <form class="contacto__form" id="contactForm" action="#" method="POST">
+                    <form class="contacto__form" id="contactForm" action="#" method="POST" data-tilt>
+                        <div class="contacto__form-glow"></div>
                         <div class="form__group">
                             <label for="nombre" class="form__label">Nombre completo</label>
                             <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Tu nombre" required>
@@ -344,7 +460,7 @@
                             <div class="contacto__info-icon">📍</div>
                             <div>
                                 <h4>Oficina Principal</h4>
-                                <p>Centro Comercial El Cacique, Piso 2, Local 205, Bucaramanga, Santander, Colombia</p>
+                                <p>Centro Comercial El Cacique, Piso 2, Local 205, Pereira, Risaralda, Colombia</p>
                             </div>
                         </div>
                         <div class="contacto__info-item">
