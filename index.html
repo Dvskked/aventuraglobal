@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aventura Global - Agencia de viajes premium. Descubre destinos increíbles alrededor del mundo.">
+    <meta name="author" content="Andres Forero">
+    <title>Aventura Global | Agencia de Viajes Premium</title>
+    <link rel="icon" type="image/png" href="img/agency.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="inicio">
+        <div class="header__container">
+            <a href="#inicio" class="header__logo">
+                <img src="img/agency.png" alt="Aventura Global Logo" class="header__logo-img">
+                <span class="header__brand-name">Aventura Global</span>
+            </a>
+            <nav class="header__nav" id="navMenu">
+                <ul class="header__menu">
+                    <li><a href="#inicio" class="header__link">Inicio</a></li>
+                    <li><a href="#destinos" class="header__link">Destinos</a></li>
+                    <li><a href="#paquetes" class="header__link">Paquetes</a></li>
+                    <li><a href="#galeria" class="header__link">Galería</a></li>
+                    <li><a href="#reseñas" class="header__link">Reseñas</a></li>
+                    <li><a href="#contacto" class="header__link">Contacto</a></li>
+                </ul>
+            </nav>
+            <button class="header__toggle" id="navToggle" aria-label="Abrir menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero / Carrusel -->
+    <section class="hero" id="hero">
+        <div class="hero__carrusel">
+            <div class="hero__slides">
+                <div class="hero__slide hero__slide--1">
+                    <div class="hero__overlay"></div>
+                    <img src="img/slide1.jpg" alt="Destinos tropicales" class="hero__img">
+                    <div class="hero__content">
+                        <h1 class="hero__title" data-text="Descubre el Mundo">Descubre el Mundo</h1>
+                        <p class="hero__subtitle">Experiencias únicas que transformarán tu vida</p>
+                        <a href="#paquetes" class="btn btn--primary">Ver Paquetes</a>
+                    </div>
+                </div>
+                <div class="hero__slide hero__slide--2">
+                    <div class="hero__overlay"></div>
+                    <img src="img/slide2.jpg" alt="Aventuras extremas" class="hero__img">
+                    <div class="hero__content">
+                        <h1 class="hero__title" data-text="Aventuras Extremas">Aventuras Extremas</h1>
+                        <p class="hero__subtitle">Desafía tus límites en los mejores destinos</p>
+                        <a href="#paquetes" class="btn btn--primary">Explorar</a>
+                    </div>
+                </div>
+                <div class="hero__slide hero__slide--3">
+                    <div class="hero__overlay"></div>
+                    <img src="img/slide3.jpg" alt="Relax y playa" class="hero__img">
+                    <div class="hero__content">
+                        <h1 class="hero__title" data-text="Relax Total">Relax Total</h1>
+                        <p class="hero__subtitle">Playas paradisíacas te esperan</p>
+                        <a href="#paquetes" class="btn btn--primary">Reservar Ahora</a>
+                    </div>
+                </div>
+            </div>
+            <button class="hero__btn hero__btn--prev" id="prevBtn" aria-label="Anterior">&#10094;</button>
+            <button class="hero__btn hero__btn--next" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+            <div class="hero__dots" id="heroDots"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main>
+
+        <!-- Destinos Populares -->
+        <section class="section" id="destinos">
+            <div class="container">
+                <h2 class="section__title">Destinos Populares</h2>
+                <p class="section__subtitle">Explora los lugares más fascinantes del planeta</p>
+                <div class="destinos__grid">
+                    <article class="destino-card">
+                        <div class="destino-card__img">
+                            <img src="img/destino1.jpg" alt="Santorini, Grecia">
+                            <div class="destino-card__overlay">
+                                <span class="destino-card__tag">Europa</span>
+                            </div>
+                        </div>
+                        <div class="destino-card__content">
+                            <h3 class="destino-card__title">Santorini, Grecia</h3>
+                            <p class="destino-card__text">Isla icónica con casas blancas y cúpulas azules frente al mar Egeo.</p>
+                            <div class="destino-card__footer">
+                                <span class="destino-card__price">Desde $4.800.000</span>
+                                <a href="#paquetes" class="destino-card__link">Ver más →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="destino-card">
+                        <div class="destino-card__img">
+                            <img src="img/destino2.jpg" alt="Bali, Indonesia">
+                            <div class="destino-card__overlay">
+                                <span class="destino-card__tag">Asia</span>
+                            </div>
+                        </div>
+                        <div class="destino-card__content">
+                            <h3 class="destino-card__title">Bali, Indonesia</h3>
+                            <p class="destino-card__text">Templos ancestrales, arrozales y una cultura espiritual única.</p>
+                            <div class="destino-card__footer">
+                                <span class="destino-card__price">Desde $3.900.000</span>
+                                <a href="#paquetes" class="destino-card__link">Ver más →</a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="destino-card">
+                        <div class="destino-card__img">
+                            <img src="img/destino3.jpg" alt="Machu Picchu, Perú">
+                            <div class="destino-card__overlay">
+                                <span class="destino-card__tag">Sudamérica</span>
+                            </div>
+                        </div>
+                        <div class="destino-card__content">
+                            <h3 class="destino-card__title">Machu Picchu, Perú</h3>
+                            <p class="destino-card__text">Ciudadela inca en la cima de los Andes, Patrimonio de la Humanidad.</p>
+                            <div class="destino-card__footer">
+                                <span class="destino-card__price">Desde $3.200.000</span>
+                                <a href="#paquetes" class="destino-card__link">Ver más →</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Paquetes de Viaje -->
+        <section class="section section--alt" id="paquetes">
+            <div class="container">
+                <h2 class="section__title">Paquetes de Viaje</h2>
+                <p class="section__subtitle">Elige la experiencia perfecta para ti</p>
+                <div class="paquetes__grid">
+                    <article class="paquete-card">
+                        <div class="paquete-card__header">
+                            <span class="paquete-card__badge">Popular</span>
+                            <h3 class="paquete-card__title">Caribe Dream</h3>
+                        </div>
+                        <div class="paquete-card__body">
+                            <p class="paquete-card__desc">Visita las playas más hermosas de Cancún y Riviera Maya. Incluye hotel 5 estrellas, comidas buffet y tours acuáticos.</p>
+                            <ul class="paquete-card__features">
+                                <li>7 días / 6 noches</li>
+                                <li>Vuelos ida y vuelta</li>
+                                <li>All Inclusive</li>
+                                <li>Tours incluidos</li>
+                            </ul>
+                        </div>
+                        <div class="paquete-card__footer">
+                            <div class="paquete-card__price">
+                                <span class="paquete-card__price-label">Desde</span>
+                                <span class="paquete-card__price-value">$7.500.000</span>
+                                <span class="paquete-card__price-person">por persona</span>
+                            </div>
+                            <a href="#contacto" class="btn btn--secondary">Reservar</a>
+                        </div>
+                    </article>
+
+                    <article class="paquete-card paquete-card--featured">
+                        <div class="paquete-card__header">
+                            <span class="paquete-card__badge paquete-card__badge--gold">Premium</span>
+                            <h3 class="paquete-card__title">Europa Encantada</h3>
+                        </div>
+                        <div class="paquete-card__body">
+                            <p class="paquete-card__desc">Recorre París, Roma y Barcelona en un tour exclusivo por las ciudades más románticas de Europa con guía personalizado.</p>
+                            <ul class="paquete-card__features">
+                                <li>12 días / 11 noches</li>
+                                <li>Vuelos premium economy</li>
+                                <li>Hoteles boutique 4★</li>
+                                <li>Guía privado</li>
+                            </ul>
+                        </div>
+                        <div class="paquete-card__footer">
+                            <div class="paquete-card__price">
+                                <span class="paquete-card__price-label">Desde</span>
+                                <span class="paquete-card__price-value">$14.500.000</span>
+                                <span class="paquete-card__price-person">por persona</span>
+                            </div>
+                            <a href="#contacto" class="btn btn--gold">Reservar</a>
+                        </div>
+                    </article>
+
+                    <article class="paquete-card">
+                        <div class="paquete-card__header">
+                            <span class="paquete-card__badge">Aventura</span>
+                            <h3 class="paquete-card__title">Safari Africano</h3>
+                        </div>
+                        <div class="paquete-card__body">
+                            <p class="paquete-card__desc">Vive la experiencia del safari en Kenia y Tanzania. Avistamiento de la Gran Cinco y noches bajo las estrellas.</p>
+                            <ul class="paquete-card__features">
+                                <li>10 días / 9 noches</li>
+                                <li>Safari con jeep 4x4</li>
+                                <li>Lodges de lujo</li>
+                                <li>Experiencia Masai</li>
+                            </ul>
+                        </div>
+                        <div class="paquete-card__footer">
+                            <div class="paquete-card__price">
+                                <span class="paquete-card__price-label">Desde</span>
+                                <span class="paquete-card__price-value">$18.000.000</span>
+                                <span class="paquete-card__price-person">por persona</span>
+                            </div>
+                            <a href="#contacto" class="btn btn--secondary">Reservar</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galería -->
+        <section class="section" id="galeria">
+            <div class="container">
+                <h2 class="section__title">Galería de Experiencias</h2>
+                <p class="section__subtitle">Momentos capturados por nuestros viajeros</p>
+                <div class="galeria__grid">
+                    <div class="galeria__item galeria__item--wide">
+                        <img src="img/galeria1.jpg" alt="Atardecer en playa" loading="lazy">
+                        <div class="galeria__caption">Atardecer en Tulum</div>
+                    </div>
+                    <div class="galeria__item">
+                        <img src="img/galeria2.jpg" alt="Montañas nevadas" loading="lazy">
+                        <div class="galeria__caption">Alpes Suizos</div>
+                    </div>
+                    <div class="galeria__item">
+                        <img src="img/galeria3.jpg" alt="Ciudad nocturna" loading="lazy">
+                        <div class="galeria__caption">Tokio de Noche</div>
+                    </div>
+                    <div class="galeria__item galeria__item--tall">
+                        <img src="img/galeria4.jpg" alt="Templo antiguo" loading="lazy">
+                        <div class="galeria__caption">Angkor Wat</div>
+                    </div>
+                    <div class="galeria__item">
+                        <img src="img/galeria5.jpg" alt="Desierto" loading="lazy">
+                        <div class="galeria__caption">Sahara</div>
+                    </div>
+                    <div class="galeria__item galeria__item--wide">
+                        <img src="img/galeria6.jpg" alt="Cascada tropical" loading="lazy">
+                        <div class="galeria__caption">Cataratas del Iguazú</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reseñas -->
+        <section class="section section--dark" id="reseñas">
+            <div class="container">
+                <h2 class="section__title section__title--light">Lo Que Dicen Nuestros Viajeros</h2>
+                <p class="section__subtitle section__subtitle--light">Experiencias reales de clientes satisfechos</p>
+                <div class="reviews__grid">
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">"Increíble experiencia en Bali. Todo estaba perfectamente organizado, desde los templos hasta los restaurantes. La guía local fue excepcional."</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">
+                                <img src="img/review1.jpg" alt="Foto de María García">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Mark Zuckerberg</h4>
+                                <span class="review-card__trip">Bali, Indonesia — Marzo 2025</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">"El safari fue la experiencia de mi vida. Ver a los leones de cerca y dormir en una cabaña en la sabana es algo que nunca olvidaré."</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">
+                                <img src="img/review2.jpg" alt="Foto de Carlos Mendoza">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Linus Torvalds</h4>
+                                <span class="review-card__trip">Safari Kenia — Enero 2026</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="review-card">
+                        <div class="review-card__stars">★★★★★</div>
+                        <p class="review-card__text">"Nuestra luna de miel en Santorini fue mágica. El hotel con vista al mar, las excursiones en barco y la comida griega... todo perfecto."</p>
+                        <div class="review-card__author">
+                            <div class="review-card__avatar">
+                                <img src="img/review3.jpg" alt="Foto de Ana y Pedro Ruiz">
+                            </div>
+                            <div class="review-card__info">
+                                <h4 class="review-card__name">Steve Jobs</h4>
+                                <span class="review-card__trip">Santorini, Grecia — Junio 2025</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto -->
+        <section class="section" id="contacto">
+            <div class="container">
+                <h2 class="section__title">Contáctanos</h2>
+                <p class="section__subtitle">¿Listo para tu próxima aventura? Escríbenos</p>
+                <div class="contacto__grid">
+                    <form class="contacto__form" id="contactForm" action="#" method="POST">
+                        <div class="form__group">
+                            <label for="nombre" class="form__label">Nombre completo</label>
+                            <input type="text" id="nombre" name="nombre" class="form__input" placeholder="Tu nombre" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Correo electrónico</label>
+                            <input type="email" id="email" name="email" class="form__input" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="destino" class="form__label">Destino de interés</label>
+                            <select id="destino" name="destino" class="form__input form__select">
+                                <option value="">Selecciona un destino</option>
+                                <option value="caribe">Caribe Dream</option>
+                                <option value="europa">Europa Encantada</option>
+                                <option value="safari">Safari Africano</option>
+                                <option value="bali">Bali, Indonesia</option>
+                                <option value="santorini">Santorini, Grecia</option>
+                                <option value="otro">Otro destino</option>
+                            </select>
+                        </div>
+                        <div class="form__group">
+                            <label for="mensaje" class="form__label">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" class="form__input form__textarea" placeholder="Cuéntanos sobre tu viaje ideal..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">Enviar Mensaje</button>
+                    </form>
+
+                    <div class="contacto__info">
+                        <div class="contacto__info-item">
+                            <div class="contacto__info-icon">📍</div>
+                            <div>
+                                <h4>Oficina Principal</h4>
+                                <p>Centro Comercial El Cacique, Piso 2, Local 205, Bucaramanga, Santander, Colombia</p>
+                            </div>
+                        </div>
+                        <div class="contacto__info-item">
+                            <div class="contacto__info-icon">📞</div>
+                            <div>
+                                <h4>Teléfono</h4>
+                                <p>+57 (66) 320-4567</p>
+                            </div>
+                        </div>
+                        <div class="contacto__info-item">
+                            <div class="contacto__info-icon">✉️</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contacto@aventuraglobal.com</p>
+                            </div>
+                        </div>
+                        <div class="contacto__info-item">
+                            <div class="contacto__info-icon">🕐</div>
+                            <div>
+                                <h4>Horario</h4>
+                                <p>Lunes a Viernes: 9:00 - 19:00<br>Sábados: 10:00 - 15:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__brand">
+                    <img src="img/agency.png" alt="Aventura Global" class="footer__logo">
+                    <p class="footer__tagline">Transformando viajes en recuerdos inolvidables desde 2010.</p>
+                    <div class="footer__social">
+                        <a href="#" class="footer__social-link" aria-label="Facebook">Facebook</a>
+                        <a href="#" class="footer__social-link" aria-label="Instagram">Instagram</a>
+                        <a href="#" class="footer__social-link" aria-label="Twitter">Twitter</a>
+                        <a href="#" class="footer__social-link" aria-label="YouTube">YouTube</a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Destinos</h4>
+                    <ul>
+                        <li><a href="#">Cancún</a></li>
+                        <li><a href="#">Europa</a></li>
+                        <li><a href="#">Asia</a></li>
+                        <li><a href="#">Sudamérica</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Blog de viajes</a></li>
+                        <li><a href="#">Trabaja con nosotros</a></li>
+                        <li><a href="#">Preguntas frecuentes</a></li>
+                    </ul>
+                </div>
+                <div class="footer__links">
+                    <h4 class="footer__heading">Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                        <li><a href="#">Política de cancelación</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Aventura Global. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
